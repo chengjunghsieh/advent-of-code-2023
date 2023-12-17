@@ -18,3 +18,8 @@ Part 2:
 > It does, however, interact badly if your ray and one of the edges of the shape is collinear, so you have to be clever about it for this problem.
 
 > Part 2: If we consider the closed loop as an integral polygon then [Pick's theorem](https://en.wikipedia.org/wiki/Pick%27s_theorem) relates the area of the closed loop (which can be calculated using the [shoelace formula](https://en.wikipedia.org/wiki/Shoelace_formula)), the number of integer points on the boundary of the closed loop (which is just the length of the close loop), and the number of integer points in the interior of the loop (which is the answer).
+
+# Day 12
+
+* DP
+* use `functools::cache` for memorizing
