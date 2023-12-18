@@ -1,5 +1,15 @@
 # advent-of-code-2023
 
+Tricks:
+
+```python
+def transpose(x: list[str]) -> list[str]:
+  return list(zip(*x))
+
+def rotate90(x: list[str]) -> list[str]:
+  return list((map(lambda l: ''.join(reversed(l)), zip(*x))))
+```
+
 
 ## Day 07
 
@@ -23,3 +33,21 @@ Part 2:
 
 * DP
 * use `functools::cache` for memorizing
+
+# Day 13
+
+[u/4HbQ solution](https://topaz.github.io/paste/#XQAAAQAvAQAAAAAAAAA4HMAC0B3AtL+oWviBxctH86JJ/6PHrH/ibLmvcCigiNSr3DJj/8ZvYRMK4yAj3KqAAi0HpH+1HI3c477ShjEEy5eU0rJZ5XPMYjUa7KUUSMAW1drkZO07jdwAFDkc4bNsMoNxYUsKIVSpdlovqUPejkc8NpWtBAgIWd7/9ZC4/XSwnbMYcblPFtJMKIF6yJqiVrhsUCTxX5zJZd/K0lmHVrZ/8Hi1ih/6gOHGvfXUkst4D1Vh+XV6LhD8OqPlRM7DQNvM8SKMBsBnnuE+BBYeFTWIuJIFP//B2RkA)
+
+# Day 14
+
+* Memorization and find cycle
+
+# Day 16
+[u/4HbQ solution](https://topaz.github.io/paste/#XQAAAQAUAwAAAAAAAAAziAOiE/kI+atcxglPNa1Z5ByKIiDHt58MHifgG2R3rf+zqKYQZv1B457oZ4kCsEABs+9eoKiNQRgfhGTI51bj3uRshO3PWkcO2ujzAaCpLjowdp1GKNTOnkukUGRQKdOcsHDROmva3wF9HKvBRmDVX57YyOReLWiXWu7VZ6BH+4I4+HYwrpO4f3Cnm0z1SibCaOiKz4eojGMOAGzZZpSzQOL3fz30dX5Pyz12ucW45Yuu+ZiaJ7UdH/MYB9mWGHziy8uujcM+VxQUCWPjkRQ0XdsUM3PC+CTKPYXP2Gyaq+wyME55uuGsNGBw46QrFtVC+Shv2NuT8LF2oxefM5bcWLHsbpmwLCIV0EqhAiT5KgU7RRDjVOGA4hLybRH7NlZSaFrNUASfRa+QEb2StcGlaaQnm5IpLIJ0ngBwFVo1XbqqDcxOKAMUfyPEs1EQR2JOm/9/+sQBjXgiCNWpr//6SPk0)
+
+# Day 17
+
+* usage of `heapq`
+* vairant of Dijkstra
+* State is `(position, direction)`
+* when reaching a cell push the possibility from `min_step` to `max_step` then turn to next direction
